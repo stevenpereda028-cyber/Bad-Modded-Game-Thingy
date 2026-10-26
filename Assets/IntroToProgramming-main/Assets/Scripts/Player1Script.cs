@@ -101,21 +101,6 @@ public class Player1Script : MonoBehaviour
             T.position = pos;
         }
 
-        Cooldown -= Time.deltaTime;
-        //If Countdown hits 0, that means it's time to spawn the new object
-        if (Cooldown <= 0f)
-        {
-            Cooldown = CooldownReference;
-            ;
-            //First we decide where the object should spawn.
-            //We take the spawner's position (transform.position) and offset it by the random spawn range
-            Vector3 where = transform.position + new Vector3(.Range(-Range.x, Range.x),.Range(-Range.y, Range.y), 0);
-            Vector3 where = transform.position + new Vector3(Range(-Range.x, Range.x),Range(-Range.y, Range.y), 0);
-
-            //This line of code actually spawns the object. Ignore 'Quaternion.identity' for now
-            Instantiate(SpawnedObject, where, Quaternion.identity);
-        }
-
     }
 
     //This gets called whenever you bump into another object, like a wall or coin.
