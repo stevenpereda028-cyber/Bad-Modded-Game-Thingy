@@ -67,7 +67,7 @@ public class Player1Script : MonoBehaviour
         {
             vel.y = -Speed;
         }
-        
+
         //Finally, I take that variable and I feed it to the component in charge of movement
         RB.linearVelocity = vel;
 
@@ -99,6 +99,12 @@ public class Player1Script : MonoBehaviour
             T.position = pos;
         }
 
+        //Fire bullet
+        Cooldown -= Time.deltaTime;
+        if (Cooldown <= 0 && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+
+        }
     }
 
     //This gets called whenever you bump into another object, like a wall or coin.
@@ -134,7 +140,7 @@ public class Player1Script : MonoBehaviour
 
     //This function updates the game's score text to show how many points you have
     //Even if your 'score' variable goes up, if you don't update the text the player doesn't know
-    private void UpdateScore()
+    public void UpdateScore()
     {
         ScoreText.text = "Player 1 HP: " + HP;
     }
