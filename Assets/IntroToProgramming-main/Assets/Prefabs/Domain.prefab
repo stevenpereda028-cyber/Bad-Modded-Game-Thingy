@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa1248a0ad22dd44add503d8cbbe22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  CoolDown: 30
-  SpawnTime: 30
+  CoolDown: 45
+  SpawnTime: 45
   SpawnedObject: {fileID: 6843006567768414789, guid: aa65eac18ca3cbe40b27049b28b5f49c, type: 3}
   Range: {x: 3.5, y: 5}

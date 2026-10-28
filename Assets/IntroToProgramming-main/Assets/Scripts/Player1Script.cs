@@ -28,8 +28,6 @@ public class Player1Script : MonoBehaviour
 
     public float CooldownReference;
 
-    public GameObject SpawnedObject;
-
     public Vector2 Range;
 
     //Start automatically gets triggered once when the objects turns on/the game starts
@@ -136,7 +134,7 @@ public class Player1Script : MonoBehaviour
 
     //This function updates the game's score text to show how many points you have
     //Even if your 'score' variable goes up, if you don't update the text the player doesn't know
-    public void UpdateScore()
+    private void UpdateScore()
     {
         ScoreText.text = "Player 1 HP: " + HP;
     }

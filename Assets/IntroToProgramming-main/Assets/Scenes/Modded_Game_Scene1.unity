@@ -560,6 +560,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7568985093557757696, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
+      propertyPath: m_Name
+      value: Muzzle 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8714988357030234600, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5
@@ -613,6 +617,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8714988357030234600, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
   m_PrefabInstance: {fileID: 3926531873766881997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1432872168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8575428758395811228, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+  m_PrefabInstance: {fileID: 2147281175}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1450771835
 PrefabInstance:
@@ -672,11 +681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1967391339214984864, guid: 1ce2a5dd452ede84bbf4f1f2c20419f5, type: 3}
       propertyPath: CoolDown
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1967391339214984864, guid: 1ce2a5dd452ede84bbf4f1f2c20419f5, type: 3}
       propertyPath: SpawnTime
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4315612222123926132, guid: 1ce2a5dd452ede84bbf4f1f2c20419f5, type: 3}
       propertyPath: m_Name
@@ -868,6 +877,88 @@ RectTransform:
   m_AnchoredPosition: {x: 8, y: 4}
   m_SizeDelta: {x: 4.5, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1971507466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7568985093557757696, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
+  m_PrefabInstance: {fileID: 3926531873766881997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1971507467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6619701043961770408, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
+  m_PrefabInstance: {fileID: 3926531873766881997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1971507468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971507466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0d176169396e444bc6887b17a8ede7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GunScript
+  Bullet: {fileID: 1432872168}
+  Muzzle: {fileID: 1971507467}
+  BulletSpeed: 10
+--- !u!1001 &2147281175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575428758395811228, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_Name
+      value: Bullet
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
 --- !u!1001 &3926531873766881997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -916,6 +1007,10 @@ PrefabInstance:
       propertyPath: CooldownReference
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7568985093557757696, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
+      propertyPath: m_Name
+      value: Muzzle 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8714988357030234600, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.5
@@ -959,7 +1054,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7568985093557757696, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1971507468}
   m_SourcePrefab: {fileID: 100100000, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
 --- !u!1001 &5503450295561644507
 PrefabInstance:
@@ -1100,11 +1198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1967391339214984864, guid: 1ce2a5dd452ede84bbf4f1f2c20419f5, type: 3}
       propertyPath: CoolDown
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1967391339214984864, guid: 1ce2a5dd452ede84bbf4f1f2c20419f5, type: 3}
       propertyPath: SpawnTime
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4315612222123926132, guid: 1ce2a5dd452ede84bbf4f1f2c20419f5, type: 3}
       propertyPath: m_Name
@@ -1128,3 +1226,4 @@ SceneRoots:
   - {fileID: 7476070953267699790}
   - {fileID: 295612296}
   - {fileID: 5503450295561644507}
+  - {fileID: 2147281175}

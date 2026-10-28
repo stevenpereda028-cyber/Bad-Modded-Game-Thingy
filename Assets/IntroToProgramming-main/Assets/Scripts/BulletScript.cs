@@ -18,6 +18,7 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
     public void GetBumped()
     {
