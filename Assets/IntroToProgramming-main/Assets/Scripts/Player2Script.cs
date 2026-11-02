@@ -24,6 +24,8 @@ public class Player2Script : MonoBehaviour
     //This is how many points we currently have
     public int HP = 3;
 
+    public GameObject Bullet;
+
     //Start automatically gets triggered once when the objects turns on/the game starts
     void Start()
     {

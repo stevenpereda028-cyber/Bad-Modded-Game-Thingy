@@ -10,25 +10,21 @@ using UnityEngine.SceneManagement;
 public class Player1Script : MonoBehaviour
 {
     public Transform T;
-    
+
     //The Rigidbody2D is a component that gives the player physics, and is what we use to move
     public Rigidbody2D RB;
 
     //TextMeshPro is a component that draws text on the screen.
     //We use this one to show our score.
     public TextMeshPro ScoreText;
-    
+
     //This will control how fast the player moves
     public float Speed = 5;
-    
+
     //This is how many points we currently have
     public int HP = 3;
 
-    public float Cooldown;
-
-    public float CooldownReference;
-
-    public Vector2 Range;
+    public GameObject Bullet;
 
     //Start automatically gets triggered once when the objects turns on/the game starts
     void Start()
@@ -43,10 +39,10 @@ public class Player1Script : MonoBehaviour
     {
         //The code below controls the character's movement
         //First we make a variable that we'll use to record how we want to move
-        Vector2 vel = new Vector2(0,0);
-        
+        Vector2 vel = new Vector2(0, 0);
+
         //Then we use if statement to figure out what that variable should look like
-        
+
         //If I hold the right arrow key, the player should move right. . .
         if (Keyboard.current.dKey.isPressed)
         {
@@ -99,16 +95,11 @@ public class Player1Script : MonoBehaviour
             T.position = pos;
         }
 
-        //Fire bullet
-        Cooldown -= Time.deltaTime;
-        if (Cooldown <= 0 && Keyboard.current.eKey.wasPressedThisFrame)
-        {
-
-        }
     }
 
     //This gets called whenever you bump into another object, like a wall or coin.
-    private void OnCollisionEnter2D(Collision2D other)
+    private void 
+    OnCollisionEnter2D(Collision2D other)
     {
         //This checks to see if the thing you bumped into had the Hazard tag
         BulletScript Hazard = other.gameObject.GetComponent<BulletScript>();
@@ -122,7 +113,7 @@ public class Player1Script : MonoBehaviour
             //Update score text 
             UpdateScore();
         }
-        
+
         //This checks to see if the thing you bumped into has the CoinScript script on it
         CoinScript coin = other.gameObject.GetComponent<CoinScript>();
         //If it does, run the code block belows
@@ -140,8 +131,10 @@ public class Player1Script : MonoBehaviour
 
     //This function updates the game's score text to show how many points you have
     //Even if your 'score' variable goes up, if you don't update the text the player doesn't know
-    public void UpdateScore()
+    public void 
+        UpdateScore()
     {
         ScoreText.text = "Player 1 HP: " + HP;
     }
+
 }
