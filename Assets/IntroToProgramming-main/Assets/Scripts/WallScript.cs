@@ -32,21 +32,20 @@ public class WallScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        BulletScript Hazard = other.gameObject.GetComponent<BulletScript>();
-        if (Hazard != null)
+        BulletP1Script Hazard1 = other.gameObject.GetComponent<BulletP1Script>();
+        if (Hazard1 != null)
         {
             //Send message back that contact was made
-            Hazard.GetBumped();
+            Hazard1.GetBumped2();
         }
 
-        //This checks to see if the thing you bumped into has the CoinScript script on it
-        CoinScript coin = other.gameObject.GetComponent<CoinScript>();
-        //If it does, run the code block belows
-        if (coin != null)
+        BulletP2Script Hazard2 = other.gameObject.GetComponent<BulletP2Script>();
+        if (Hazard2 != null)
         {
-            //Tell the coin that you bumped into them so they can self destruct or whatever
-            coin.GetBumped();
+            //Send message back that contact was made
+            Hazard2.GetBumped2();
         }
+
     }
 
 }

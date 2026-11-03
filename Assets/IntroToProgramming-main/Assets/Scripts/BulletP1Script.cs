@@ -3,39 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BulletScript : MonoBehaviour
+public class BulletP1Script : MonoBehaviour
 {
-    public Transform T;
+    public Transform T1;
     public Rigidbody2D RB1;
-    public Rigidbody2D RB2;
     public GameObject Bullet;
-    public float BulletSpeed = 10f;
+    public float BulletSpeed1 = 10f;
 
     //The player calls this function on the coin whenever they bump into it
 
     void Update()
     {
-        if (T.position.x < -12f)
+        if (T1.position.x < -12f)
         {
             Destroy(gameObject);
         }
 
-        if (T.position.x > 12f)
+        if (T1.position.x > 12f)
         {
             Destroy(gameObject);
         }
 
-        RB1 = GetComponent<Rigidbody2D>();
+        Vector2 vel = new Vector2(10, 0);
 
-        RB1.linearVelocity = transform.right * BulletSpeed;
+        RB1.linearVelocity = vel;
 
-        RB2 = GetComponent<Rigidbody2D>();
-
-        RB2.linearVelocity = transform.right * -BulletSpeed;
     }
     public void
 
-    GetBumped()
+    GetBumped2()
     {
         //This destroys the object
         Destroy(gameObject);

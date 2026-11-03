@@ -509,7 +509,7 @@ MonoBehaviour:
   ScoreText: {fileID: 1781887051}
   Speed: 5
   HP: 3
-  Bullet: {fileID: 8575428758395811228, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+  Bullet: {fileID: 6688974089799396526, guid: 7a9772972b93ba942ace66f3cd7047c6, type: 3}
 --- !u!50 &570497470 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 7325685880339890275, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
@@ -525,7 +525,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7568985093557757696, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
   m_PrefabInstance: {fileID: 1059401285}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &716919537
+--- !u!4 &716919538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6619701043961770408, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
+  m_PrefabInstance: {fileID: 1059401285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &716919539
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -534,12 +539,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 716919535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b080f9132db85a848b08efcec0d82b68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f06004cddb1f944dbb68efb04195d44, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MuzzleScript
-  FiringPoint1: {fileID: 0}
-  FiringPoint2: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
-  Bullet: {fileID: 8575428758395811228, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::Muzzle2Script
+  FiringPoint: {fileID: 716919538}
+  Bullet: {fileID: 6688974089799396526, guid: 7a9772972b93ba942ace66f3cd7047c6, type: 3}
   Cooldown: 0.5
   CooldownReference: 0.5
 --- !u!1 &864594740 stripped
@@ -641,7 +645,7 @@ PrefabInstance:
       addedObject: {fileID: 570497468}
     - targetCorrespondingSourceObject: {fileID: 7568985093557757696, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 716919537}
+      addedObject: {fileID: 716919539}
   m_SourcePrefab: {fileID: 100100000, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
 --- !u!4 &1254544666 stripped
 Transform:
@@ -919,11 +923,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b080f9132db85a848b08efcec0d82b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  FiringPoint1: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
-  FiringPoint2: {fileID: 0}
+  FiringPoint: {fileID: 1971507469}
   Bullet: {fileID: 8575428758395811228, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
   Cooldown: 0.5
   CooldownReference: 0.5
+--- !u!4 &1971507469 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6619701043961770408, guid: 5465daea84a2bcb43acd34cbcbb9c9ae, type: 3}
+  m_PrefabInstance: {fileID: 3926531873766881997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3926531873766881997
 PrefabInstance:
   m_ObjectHideFlags: 0

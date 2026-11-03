@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3158722616199551282
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7679899631221125877, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.13106
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.22917
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575428758395811228, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      propertyPath: m_Name
+      value: BulletP2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -4054622555569110884, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8575428758395811228, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4171771040329738560}
+  m_SourcePrefab: {fileID: 100100000, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+--- !u!4 &2766956398808229240 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 986355751819967562, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+  m_PrefabInstance: {fileID: 3158722616199551282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &4520921893795550265 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: -7679899631221125877, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+  m_PrefabInstance: {fileID: 3158722616199551282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6688974089799396526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8575428758395811228, guid: e00b88abc07287c49bf96436447a9ad1, type: 3}
+  m_PrefabInstance: {fileID: 3158722616199551282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4171771040329738560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688974089799396526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41b6bdd7c3bc564d89245cbcd3b69f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletP2Script
+  T2: {fileID: 2766956398808229240}
+  RB2: {fileID: 4520921893795550265}
+  Bullet: {fileID: 6688974089799396526}
+  BulletSpeed: -10

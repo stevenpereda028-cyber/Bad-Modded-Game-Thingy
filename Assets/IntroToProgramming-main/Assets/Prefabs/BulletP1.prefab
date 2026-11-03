@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 986355751819967562}
   - component: {fileID: 8563901733641615634}
   - component: {fileID: 6438357987998111031}
-  - component: {fileID: 6174553894293166144}
   - component: {fileID: -7679899631221125877}
+  - component: {fileID: -4054622555569110884}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: BulletP1
   m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,23 +140,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6174553894293166144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8575428758395811228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c50a7ba6040a04f968663a0637eb11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HazardScript
-  T: {fileID: 986355751819967562}
-  RB1: {fileID: 0}
-  RB2: {fileID: 0}
-  Bullet: {fileID: 8575428758395811228}
-  BulletSpeed: 10
 --- !u!50 &-7679899631221125877
 Rigidbody2D:
   serializedVersion: 5
@@ -169,7 +152,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -184,3 +167,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4054622555569110884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575428758395811228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c50a7ba6040a04f968663a0637eb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletP1Script
+  T1: {fileID: 986355751819967562}
+  RB1: {fileID: -7679899631221125877}
+  Bullet: {fileID: 8575428758395811228}
+  BulletSpeed1: 10

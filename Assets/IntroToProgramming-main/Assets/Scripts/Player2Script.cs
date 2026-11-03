@@ -30,7 +30,7 @@ public class Player2Script : MonoBehaviour
     void Start()
     {
         //During setup we call UpdateScore to make sure our score text looks correct
-        UpdateScore();
+        UpdateScore2();
     }
 
     //Update is a lot like Start, but it automatically gets triggered once per frame
@@ -98,18 +98,29 @@ public class Player2Script : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         //This checks to see if the thing you bumped into had the Hazard tag
-        BulletScript Hazard = other.gameObject.GetComponent<BulletScript>();
+        BulletP1Script Hazard1 = other.gameObject.GetComponent<BulletP1Script>();
         //If it does...
-        if (Hazard != null)
+        if (Hazard1 != null)
         {
             //Send message back that contact was made
-            Hazard.GetBumped();
+            Hazard1.GetBumped2();
             //Make score variable decrease by 1
             HP--;
             //Update score text 
-            UpdateScore();
+            UpdateScore2();
         }
 
+        BulletP2Script Hazard2 = other.gameObject.GetComponent<BulletP2Script>();
+        //If it does...
+        if (Hazard2 != null)
+        {
+            //Send message back that contact was made
+            Hazard2.GetBumped2();
+            //Make score variable decrease by 1
+            HP--;
+            //Update score text 
+            UpdateScore2();
+        }
         //This checks to see if the thing you bumped into has the CoinScript script on it
         CoinScript coin = other.gameObject.GetComponent<CoinScript>();
         //If it does, run the code block belows
@@ -120,14 +131,24 @@ public class Player2Script : MonoBehaviour
             //Make your score variable go up by one. . .
             HP++;
             //And then update the game's score text
-            UpdateScore();
+            UpdateScore2();
+        }
+
+        if (HP == 0)
+        {
+            P2w();
         }
     }
 
     //This function updates the game's score text to show how many points you have
     //Even if your 'score' variable goes up, if you don't update the text the player doesn't know
-    public void UpdateScore()
+    public void UpdateScore2()
     {
         ScoreText.text = "Player 2 HP: " + HP;
+    }
+
+    void P2w()
+    {
+        SceneManager.LoadScene("Modded_Game_Over2");
     }
 }

@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MuzzleScript : MonoBehaviour
+public class Muzzle1Script : MonoBehaviour
 {
     public Transform FiringPoint;
     public GameObject Bullet;
@@ -24,20 +24,11 @@ public class MuzzleScript : MonoBehaviour
             Cooldown = CooldownReference;
         }
 
-        Cooldown -= Time.deltaTime;
-        if (Cooldown <= 0f && Keyboard.current.digit0Key.isPressed)
-        {
-            Shoot2();
-            Cooldown = CooldownReference;
-        }
     }
 
     void Shoot1()
     {
         Instantiate(Bullet, FiringPoint.position, FiringPoint.rotation);
     }
-    void Shoot2()
-    {
-        Instantiate(Bullet, FiringPoint.position, FiringPoint.rotation);
-    }
+   
 }
